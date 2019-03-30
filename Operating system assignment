@@ -1,0 +1,89 @@
+import java.util.Scanner;
+
+class ab{
+  
+public static void main(String[] args)
+  
+{
+  
+System.out.println("*********************MAX GIFT PREFERENCE PROGRAM********************");  
+char c='a';
+   
+ char[] a=new char[10];
+  
+  for(int i=0;i<10;i++)
+    
+ {
+       
+a[i]=c++;
+       
+     
+}
+    
+int[] ar=new int[10];
+    
+for(int i=0;i<10;i++)
+     
+{
+       
+ar[i]=(int)(Math.random()*10);
+       
+     
+}
+   
+for (int j=0;j<10;j++)  
+   
+System.out.println(a[j]+"="+ar[j]);
+   
+ab ob=new ab();
+   
+ob.sort(ar,a);
+ 
+ }
+  
+void sort(int[] ar,char[] a)
+  
+{
+   
+int temp;
+
+   char d;
+    
+for(int i=0;i<10;i++)
+    
+{
+     
+for(int j=0;j<10;j++)
+     
+{
+        
+if(ar[i]>ar[j])
+{
+        
+temp=ar[j];
+        
+ar[j]=ar[i];
+        
+ar[i]=temp;
+        
+d=a[j];
+        
+a[j]=a[i];
+        
+a[i]=d;
+        
+        
+}
+ 
+ }
+ 
+ }
+  
+for (int j=0;j<10;j++)  
+
+   System.out.println(a[j]);
+  
+}
+
+}
+ 
